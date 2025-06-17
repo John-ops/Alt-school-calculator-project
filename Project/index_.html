@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Calculator with History</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <style>
+         
+    </style>
+
+
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="current-input" id="currentInput">0</div>
+                <div class="result" id="result"></div>
+            </div>
+            
+            <div class="buttons">
+                <button class="number" onclick="appendNumber('1')">1</button>
+                <button class="number" onclick="appendNumber('2')">2</button>
+                <button class="number" onclick="appendNumber('3')">3</button>
+                <button class="operator" onclick="appendOperator('*')">×</button>
+                <button class="operator" onclick="appendOperator('/')">/</button>
+                
+                <button class="number" onclick="appendNumber('4')">4</button>
+                <button class="number" onclick="appendNumber('5')">5</button>
+                <button class="number" onclick="appendNumber('6')">6</button>
+                <button class="operator" onclick="appendOperator('+')">+</button>
+                <button class="operator" onclick="appendOperator('-')">-</button>
+                
+                
+                <button class="number" onclick="appendNumber('7')">7</button>
+                <button class="number" onclick="appendNumber('8')">8</button>
+                <button class="number" onclick="appendNumber('9')">9</button>
+                <button class="operator" onclick="appendOperator('%')">%</button>
+                <button class="operator" onclick="appendOperator('*')">*</button>
+                
+                <button class="dot" onclick="appendOperator('.')">.</button>
+                
+                
+                <button class="number" onclick="appendNumber('0')">0</button>
+                <button class="backspace" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+                <button class="equal" onclick="calculate()">=</button>
+                
+                
+            </div>
+        
+        <div class="history">
+            <h3><i class="fas fa-history"></i> Calculation History</h3>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">Your calculations will appear here</div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js">  </script>
+
+</body>
+</html>

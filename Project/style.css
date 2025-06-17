@@ -1,0 +1,211 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+            padding: 20px;
+        }
+
+            .calculator-container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            background: #2c3e50;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+
+
+        .calculator {
+            width: 60%;
+            padding: 25px;
+            background: #030218f3;
+             border-radius: 20px 0 0 20px;
+
+        }
+
+        .history {
+
+            background: #030218f3;
+            padding: 25px;
+            border-radius: 0 20px 20px 0;
+            border-left: 1px solid #3d566e;
+
+
+        }
+
+        .display {
+            background: #2B2B44;
+            color: #fff;
+            font-size: 1.2rem;
+            padding-right: 4px;
+
+            border-left: 1px solid #3d566e;
+            text-align: right;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .current-input {
+            font-size: 1.7rem;
+            min-height: 2px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .result {
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            min-height: 40px;
+            margin-top: 1px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 1.1rem;
+            border: 0;
+            border-radius: 20px;
+            color: white;
+            transition: all .3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dot{
+            background: #34495e;
+
+        }
+
+        .number {
+            background: #34495e;
+        }
+
+        .operator {
+            background: #f39c12;
+        }
+
+        .equal {
+            color: black;
+            background: rgb(167, 167, 167);
+            padding-left: px;
+            margin-left:8px;
+        }
+
+
+        .backspace {
+            background: #34495e;
+            margin-left: 10px;
+        }
+
+        .history h3 {
+            color: #ecf0f1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            padding-top: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom:10px;
+    
+        }
+
+        .history-list {
+            height: 136px;
+            overflow-y: auto;
+            padding-right: 1px;
+        }
+
+        .history-item {
+            background: #2B2B44;
+            padding: 5px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.0005s ease-in-out;
+            cursor: pointer;
+        }
+
+        .history-item:hover {
+            background: black;
+            transform: translateX(5px);
+        }
+
+        .history-expression {
+            font-weight: bold;
+        }
+
+        .history-result {
+            color: gray;
+            text-align: right;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+
+        .empty-history {
+            text-align: center;
+            color: #95a5a6;
+            font-style: italic;
+            margin-top: 40px;
+        }
+
+
+@media (max-width: 768px) {
+            .calculator-container {
+                flex-direction: column;
+            }
+            
+            .calculator {
+                width: 100%;
+            }
+            
+            .calculator {
+                border-radius: 20px 20px 0 0;
+            }
+            
+            .history {
+                border-radius: 0 0 20px 20px;
+                border-left: none;
+                border-top: 1px solid #3d566e;
+            }
+        }
+
+@media (max-width: 480px) {
+    .buttons {
+        grid-template-columns: repeat(3.5, 5fr);
+        gap: 9px;
+    }
+
+    button {
+
+        padding: 10px;
+        min-width: 100%; /* Prevent crowding */
+    }
+
+}
